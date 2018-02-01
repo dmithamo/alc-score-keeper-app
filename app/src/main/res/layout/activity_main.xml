@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_green"
+    tools:context="com.example.dennis.scores.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/score_board"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_weight="2"
+                android:padding="8dp"
+                android:src="@drawable/chelseas_logo" />
+
+            <TextView
+                android:id="@+id/chelsea_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:background="#38003c"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center"
+                android:text="4"
+                android:textColor="#fff"
+                android:textSize="30sp" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:src="@drawable/goal" />
+
+            <TextView
+                android:id="@+id/united_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:background="#38003c"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center"
+                android:text="4"
+                android:textColor="#fff"
+                android:textSize="30sp" />
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_weight="2"
+                android:padding="8dp"
+                android:src="@drawable/man_u_logo" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/red_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/score_board"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/chelsea_reds"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="4"
+                android:textColor="#e90052"
+                android:textSize="20sp" />
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#e90052"
+                android:padding="5dp"></View>
+
+            <TextView
+                android:id="@+id/united_reds"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="20"
+                android:textColor="#e90052"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/yellow_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/red_card"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/chelsea_yellows"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="4"
+                android:textColor="#ffff00"
+                android:textSize="20sp" />
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#ffff00"
+                android:padding="5dp"></View>
+
+            <TextView
+                android:id="@+id/united_yellowss"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="20"
+                android:textColor="#ffff00"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/kenya"
+            android:layout_marginTop="24dp"
+            android:layout_below="@id/yellow_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="90dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <Button
+                    android:onClick="addChelseaGoals"
+                    android:id="@+id/chelsea_goal_button"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/goal_button"
+                    android:text="Goal!"
+                    android:textColor="#000" />
+
+                <Button
+                    android:onClick="addChelseaReds"
+                    android:id="@+id/chelsea_red"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/red_card_button"
+                    android:text="Red Card"
+                    android:textColor="#000" />
+
+                <Button
+                    android:onClick="addChelseaYellows"
+                    android:id="@+id/chelsea_yellow"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/yellow_card_button"
+                    android:text="Yellow Card"
+                    android:textColor="#000" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <Button
+                    android:onClick="addUnitedGoals"
+                    android:id="@+id/united_goal_button"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+
+                    android:background="@drawable/goal_button"
+                    android:text="Goal!"
+                    android:textColor="#000"/>
+
+                <Button
+                    android:onClick="addUnitedReds"
+                    android:id="@+id/united_red"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/red_card_button"
+                    android:text="Red Card"
+                    android:textColor="#000" />
+
+                <Button
+                    android:onClick="addUnitedYellows"
+                    android:id="@+id/united_yellow"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/yellow_card_button"
+                    android:text="Yellow Card"
+                    android:textColor="#000" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--Something ain't right. Using marginTop instead of layout_below...-->
+
+        <LinearLayout
+            android:id="@+id/footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:layout_below="@+id/kenya"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_gravity="center"
+                android:onClick="resetGame"
+                android:id="@+id/reset_button"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:background="@drawable/reset_button"
+                android:text="reset"
+                android:textStyle="bold"
+                android:textColor="#e90052" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:src="@drawable/epl_header" />
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+
+
+</ScrollView>
